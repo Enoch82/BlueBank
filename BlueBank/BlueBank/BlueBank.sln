@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarroDeCompras", "CarroDeCompras\CarroDeCompras.csproj", "{5B19FFE7-C66D-4395-A43D-B2AB4A754086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueBankUnitTest", "BlueBankUnitTest\BlueBankUnitTest.csproj", "{411FF7D4-35E0-4061-8B07-BF347B274947}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B19FFE7-C66D-4395-A43D-B2AB4A754086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B19FFE7-C66D-4395-A43D-B2AB4A754086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B19FFE7-C66D-4395-A43D-B2AB4A754086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B19FFE7-C66D-4395-A43D-B2AB4A754086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411FF7D4-35E0-4061-8B07-BF347B274947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411FF7D4-35E0-4061-8B07-BF347B274947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411FF7D4-35E0-4061-8B07-BF347B274947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411FF7D4-35E0-4061-8B07-BF347B274947}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39785768-AF7B-4159-9017-3634E879EDA6}
+	EndGlobalSection
+EndGlobal

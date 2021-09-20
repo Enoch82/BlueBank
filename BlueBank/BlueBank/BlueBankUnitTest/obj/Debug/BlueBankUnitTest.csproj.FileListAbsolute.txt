@@ -1,0 +1,17 @@
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\BlueBankUnitTest.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\BlueBankUnitTest.pdb
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\obj\Debug\BlueBankUnitTest.csprojAssemblyReference.cache
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\obj\Debug\BlueBankUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\obj\Debug\BlueBankUnitTest.csproj.CopyComplete
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\obj\Debug\BlueBankUnitTest.dll
+C:\Users\ENOC\source\repos\CarroDeCompras\BlueBankUnitTest\obj\Debug\BlueBankUnitTest.pdb
