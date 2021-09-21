@@ -1,0 +1,143 @@
+.container.body{
+    background-color: lightblue;
+    margin-top: 3rem;
+    display: flex;
+    .card{
+        width: 100%;
+    }
+    .card-title{
+        text-align: center;
+    }
+
+}
+
+.container.informacion-cuenta{
+    margin-top: 3rem;
+    background-color: lightcoral;
+    display: flex;
+    
+    .card{
+        width: 100%;
+        
+    }
+    .card-title{
+        text-align: center;
+    }
+    .labels{
+        background-color: aqua;
+    }
+    .cuenta-select{
+        background-color: #ffffff;
+        max-width: 100%;
+        width: 16rem;
+        
+        height: 2rem;
+        text-align: center;
+      
+    }
+
+    .buttons-operacion{
+        display: flex;
+        justify-content: flex-end;
+        .crear-cuenta-button{
+            margin-left: 0.2rem;
+            background-color: teal;
+        }
+        .consignar-cuenta-button{
+            margin-left: 0.2rem;
+            background-color: lightgreen;
+        }
+        .retirar-cuenta-button{
+            margin-left: 0.2rem;
+            background-color: red;
+        }
+        .detalles-cuenta-button{
+            margin-left: 0.2rem;
+            background-color: green;
+        }
+    }
+
+}
+
+
+.container.informe-moviemientos{
+    margin-top: 3rem;
+    background-color: lightgreen;
+    display: flex;
+
+    .card{
+        width: 100%;
+    }
+    .card-title{
+        text-align: center;
+    }
+    .crear-cuenta-formulario {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column ;
+        .row {
+        
+            display: flex;
+            
+            justify-content: center;
+            
+
+ 
+        }
+        .crear-cuenta-button{
+            background-color: rgb(0, 167, 56);
+        }
+        
+    }
+
+    .consignar-cuenta-formulario {
+        display: flex;
+        flex-direction: column ;
+        .row {
+            display: flex;
+            flex-direction: row ;
+            justify-content: center;
+            
+         
+            .cuenta-select{
+                background-color: #ffffff;
+                max-width: 100%;
+                width: 33rem;
+                
+                height: 2rem;
+                text-align: center;
+              
+            }
+        }
+        .consignar-cuenta-button{
+            margin-top: 5px;
+            background-color: rgb(255, 157, 0);
+        }
+    }
+    .retirar-cuenta-formulario {
+        
+        display: flex;
+        flex-direction: column ;
+        .row {
+            display: flex;
+            flex-direction: row ;
+            justify-content: center;
+            
+         
+            .cuenta-select{
+                background-color: #ffffff;
+                max-width: 100%;
+                width: 33rem;
+                
+                height: 2rem;
+                text-align: center;
+              
+            }
+        }
+        .retirar-cuenta-button{
+            margin-top: 5px;
+            background-color: rgb(0, 132, 255);
+        }
+    }
+
+}

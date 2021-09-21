@@ -1,0 +1,267 @@
+<!-- CARD BODY -->
+<div class="container body">
+    <div class="card" >
+      
+      <div class="card-body">
+        <h1 class="card-title">Bienvenido, {{userInformation.nombre}} a su Banca en Linea</h1>
+  
+    
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  <!-- CARD INFORMACION CUENTA -->
+  <div class="container informacion-cuenta">
+    <div class="card" >
+      
+      <div class="card-body">
+        <h1 class="card-title">Esta es la informacion general de Su cuenta</h1>
+        <!-- PRIMERA FILA-->
+        <div class="row">
+          <div class="col-sm">
+            <mat-label>Nombres</mat-label>
+            
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control form-control-sm" id="nombres" aria-describedby="emailHelp" value="{{userInformation.nombre}}" disabled>
+          </div>
+          <div class="col-sm">
+            <label for="exampleInputEmail1">Apellido:</label>
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control form-control-sm" id="apellido" aria-describedby="emailHelp" value="{{userInformation.apellido}}" disabled>
+          </div>
+        </div>
+        <!-- / PRIMERA FILA-->
+        <!-- SEGUNDA FILA-->
+        <div class="row">
+          <div class="col-sm">
+            <label for="exampleInputEmail1 ">Tipo Documento:</label>
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control form-control-sm" id="tipoDocumento" aria-describedby="emailHelp" value="{{userInformation.tipoDocumento}}" disabled>
+          </div>
+          <div class="col-sm">
+            <label for="exampleInputEmail1">Documento:</label>
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control form-control-sm" id="documento" aria-describedby="emailHelp" value="{{userInformation.documento}}" disabled>
+          </div>
+        </div>
+        <!-- / SEGUNDA FILA -->
+        <!-- TERCERA FILA-->
+        <div class="row">
+          <div class="col-sm">
+           
+            <mat-label>Seleccione el Numero De cuenta</mat-label>
+          </div>
+          <div class="col-sm">
+            
+              
+              <select class="cuenta-select"
+                id="cuentaSelectedForm"
+                [formControl]="cuentaSelectedForm" 
+                (change)="onChange(cuentaSelectedForm.value)" >
+                <option *ngFor="let cuenta of listaCuentas"
+                  value="{{cuenta.saldoInicial}} - {{cuenta.cuentaId}}"
+                  >{{cuenta.cuentaId}}</option>
+                
+              </select>
+            
+            
+
+            
+          </div>
+          <div class="col-sm">
+            <label for="exampleInputEmail1">Saldo Inicial:</label>
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control form-control-sm" id="saldoInicial" aria-describedby="emailHelp" value="{{saldoInicial}}" disabled>
+          </div>
+        </div>
+        <!-- / TERCERA FILA-->
+      </div>
+    
+      <div class="buttons-operacion">
+    
+      
+          
+          <button mat-raised-button class="crear-cuenta-button" 
+                  (click)="mostrarCrearCuentaFn()">Crear Cuenta</button>
+          <button mat-raised-button class="consignar-cuenta-button" 
+                  (click)="mostrarConsignarCuentaFn()" 
+                  [disabled]=consignarCuentaDisable>Consignar</button>
+          <button mat-raised-button class="retirar-cuenta-button" 
+                  (click)="mostrarRetirarCuentaFn()"
+                  [disabled]=retirarCuentaDisable>Retirar</button>
+          <button mat-raised-button class="detalles-cuenta-button" 
+                  (click)="mostrarDeatllesFn()"
+                  [disabled]=detallesDisable>Detalles Moviemientos</button>
+          
+      
+      </div>
+    </div>
+  </div>
+  <!-- / CARD INFORMACION CUENTA-->
+
+  <!-- CARD TABLA MOVIMIENTOS -->
+  <div class="container informe-moviemientos" *ngIf="mostrarDetalles">
+    <div class="card" >
+      
+      <div class="card-body">
+        <h1 class="card-title">Estos son los Movimientos Bancarios</h1>
+        
+        <div class="table-responsive">
+          <table class="table">
+            <table class="table caption-top">
+              <caption>List of users</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Fecha Operacion</th>
+                  <th scope="col">Concepto</th>
+                  <th scope="col">Cargos</th>
+                  <th scope="col">Abonos</th>
+                  <th scope="col">Saldo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let mov of listaMoviemientosCuenta">
+                 
+                  <td scope="row">{{mov.movimientoId}}</td>
+                  <td>{{mov.fechaOperacion}}</td>
+                  <td>{{mov.concepto}}</td>
+                  <td>{{mov.cargos}}</td>
+                  <td>{{mov.abonos}}</td>
+                  <td>{{mov.saldo}}</td>
+                  
+                </tr>
+
+              </tbody>
+            </table>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CARD FORMULARIO TRANSACCIONES -->
+  <div class="container informe-moviemientos " >
+    <div class="card" >
+      
+      <div class="card-body">
+        <h1 class="card-title">OPERACIONES BANCARIAS</h1>
+        
+        <!--CREAR CUENTA -->
+        <div class="crear-cuenta-formulario" *ngIf="mostrarCrearCuenta">
+          <h3>Con cuanta plata vas a crear la cuenta?</h3>
+          <div class="row">
+            <form [formGroup]="crearCuentaForm">
+              
+              <div class="col ">
+               
+                  <div class="input-group mb-3">
+                    <input type="number"
+                          formControlName="saldoInicial"
+                          class="form-control"
+                          [ngClass]="{  }"
+                          placeholder="Saldo Inicial"
+                          required>
+
+        
+                  </div>
+              </div>
+            </form>
+            <button mat-raised-button class="crear-cuenta-button" 
+          (click)="crearCuentaFn(crearCuentaForm.value)">Crear</button>
+          </div>
+          
+        </div>
+        
+        <!-- CONSIGNAR CUENTA -->
+        <div class="consignar-cuenta-formulario" *ngIf="mostrarConsignarCuenta">
+          <h3>Cuanto es la consignacion?</h3>
+          <form [formGroup]="consignarCuentaForm">
+            <div class="row">
+              <div class="col">
+                <label for="exampleInputEmail1">En que Cuenta quiere hacer la Consignacion?</label>
+              </div>
+              <div class="col">
+                <select class="cuenta-select"
+                  id="cuentaSelectedForm"
+                  formControlName="cuentaId">
+                    <option *ngFor="let cuenta of listaCuentas"
+                      value="{{cuenta.cuentaId}}">{{cuenta.cuentaId}}</option>
+                
+                </select>
+                
+              </div>
+            </div>
+          <div class="row">
+            <div class="col">
+              <label for="exampleInputEmail1">Cantidad a Consiganar:</label>
+            </div>
+            <div class="col">
+              <input type="number" 
+                    formControlName="abonos"
+                    class="form-control form-control-sm" 
+                    id="abonos" aria-describedby="emailHelp" value="Saldo Inicial" >
+            </div>
+          </div>
+          </form>
+          <button mat-raised-button class="consignar-cuenta-button" 
+          (click)="consignacion(consignarCuentaForm.value)">Consignar</button>
+        
+        </div>
+        <!-- RETIRAR CUENTA -->
+        <div class="retirar-cuenta-formulario" *ngIf="mostrarRetirarCuenta">
+          <h3>Cuanto vas a retirar?</h3>
+          <form [formGroup]="retirarCuentaForm">
+            <div class="row">
+              
+                <div class="col">
+                  <label for="exampleInputEmail1">De que Cuenta Vas a Retirar?</label>
+                </div>
+                <div class="col">
+                    <select class="cuenta-select"
+                    id="cuentaId"
+                    formControlName="cuentaId">
+                      <option *ngFor="let cuenta of listaCuentas"
+                        value="{{cuenta.cuentaId}}">{{cuenta.cuentaId}}</option>
+                  
+                    </select>
+                  
+                </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="exampleInputEmail1">Cantidad a Retirar:</label>
+              </div>
+              <div class="col">
+                <input type="number" 
+                      formControlName="cargos"
+                      class="form-control form-control-sm" 
+                      id="cargos" aria-describedby="emailHelp"  >
+              </div>
+            </div>
+          </form>
+          <button mat-raised-button class="retirar-cuenta-button" 
+          (click)="retirar(retirarCuentaForm.value)">Retirar</button>
+          </div>
+       
+        </div>
+      
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>

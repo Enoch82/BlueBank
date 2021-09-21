@@ -1,0 +1,36 @@
+.container.login{
+    
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    .card{
+        width: 30%;
+        align-content: center;
+    }
+    .card-title{
+        text-align: center;
+    }
+    .card-text{
+        text-decoration: underline;
+    }
+    form {
+       
+        margin-bottom: 1.5rem;
+    }
+    .alert {
+       
+        background-color: rgb(245, 156, 156);
+        border: black;
+    }
+    .botones{
+        margin-top: 1rem;
+        
+        display: flex;
+        justify-content: center;
+        .btn {
+            margin-left: 3px;
+            
+            justify-content: flex-end;
+        }
+    }
+}

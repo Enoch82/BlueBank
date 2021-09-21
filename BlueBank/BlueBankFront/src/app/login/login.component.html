@@ -1,0 +1,47 @@
+<!-- CARD LOGIN -->
+<div class="container login">
+    <div class="card" >
+      
+      <div class="card-body">
+        <h1 class="card-title">Login</h1>
+        <p class="card-text">Ingrese sus credenciales</p>
+        
+        <form [formGroup]="loginForm">
+          <div class="input-group mb-3">
+            <input type="email"
+                   formControlName="clienteEmail"
+                   class="form-control"
+                   [ngClass]="{  }"
+                   placeholder="Email"
+                   required>
+            <div class="input-group-append">
+
+            </div>
+
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="password"
+                   formControlName="clientePassword"
+                   [ngClass]="{}"
+                   class="form-control" placeholder="Password">
+            <div class="input-group-append">
+
+            </div>
+
+          </div>
+
+
+          
+
+          
+          <div class="botones">
+            <button type="submit" class="btn btn-danger">Cancelar</button>
+            <button type="submit" class="btn btn-success" (click)="loginIn(loginForm.value)">Ingresar</button>
+          </div>
+        </form>
+        <span class="row alert" *ngIf="showMessage">{{message}}</span>
+        <span class="row alert" *ngIf="loginForm.status=='INVALID' && loginForm.dirty">Diligencie todos los campos</span>
+      </div>
+    </div>
+  </div>
